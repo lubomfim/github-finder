@@ -32,5 +32,3 @@ function consumirAPI(url) {
       console.log(erro);
     });
 }
-
-// if
