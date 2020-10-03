@@ -5,13 +5,7 @@ const user = filtrarParametros.get("user");
 consumirAPI("https://api.github.com/users/" + user);
 
 function consumirAPI(url) {
-  fetch(url, {
-    method: "get",
-    headers: new Headers({
-      Authorization:
-        "30:ee:d9:84:37:fc:a5:01:0c:ea:f2:65:70:12:47:e0:6e:56:5b:3c",
-    }),
-  })
+  fetch(url)
     .then(function (resposta) {
       return resposta.json();
     })
