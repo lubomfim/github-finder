@@ -4,37 +4,41 @@ const user = filtrarParametros.get("user");
 
 consumirAPI("https://api.github.com/users/" + user);
 
-function consumirAPI(url) {
-  fetch(url)
-    .then(function (resposta) {
-      return resposta.json();
-    })
+$(document).ready()
 
-    .then(function (dados) {
-      alimentar(dados);
-      console.log(dados);
-    })
+function consumirAPI() {
+  $.ajax({
+    url: "https://api.github.com/users/" + user,
+    type: "get",
+  })
 
-    .catch(function (erro) {
-      alert("Conexão apresenta erro. Tente novamente em alguns minutos.");
-      console.log("Erro de conexão:");
-      console.log(erro);
-    });
+  .done(function(dados) {
+    alimentar(dados)
+  })
+
+  .fail (function() {
+    alert("Conexão apresenta erro. Tente novamente em alguns minutos.");
+  })
 }
 
+
 function alimentar(dados) {
-  let nome = document.querySelector("h2");
-  let bio = document.querySelector(".description");
-  let followers = document.querySelector(".followers__number");
-  let following = document.querySelector(".following__number");
-  let avatar = document.querySelector(".avatar");
-  let title = document.querySelector("title");
+  let nome = $("h2");
+  let bio = $(".description");
+  let followers = $(".followers__number");
+  let following = $(".following__number");
+  let avatar = $(".avatar");
+  let title = $("title");
 
-  nome.textContent = dados.name;
-  bio.textContent = dados.bio;
-  followers.textContent = dados.followers;
-  following.textContent = dados.following;
-  avatar.src = dados.avatar_url;
+  /* const {name,bio,followers,following,avatar_url} = dados */
+  // desestruturação
 
-  title.textContent = dados.name;
+
+  nome.html(dados.name);
+  bio.html(dados.bio);
+  followers.html(dados.followers);
+
+  following.html(dados.following);
+  avatar.attr("src", dados.avatar_url);
+  title.html(dados.name);
 }
