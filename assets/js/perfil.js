@@ -43,7 +43,6 @@ function alimentarDadosPessoais(dados) {
 
 
 function consumirApiRepositorios (url) {
-  console.log(url)
   fetch(url)
   .then(function(reposta) {
     return reposta.json()

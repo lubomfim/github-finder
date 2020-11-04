@@ -84,3 +84,10 @@ small {
   font-size: 2rem;
   font-family: var(--font-raleway);
 }
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
