@@ -4,7 +4,7 @@ Esse aplicativo foi desenvolvido para localizar usuários dentro do GitHub pelo 
 
 <br>
 <br>
-<img width="600" src="assets/design.png">
+<img width="600" src="assets/img/design.png">
 
 ## Technologies
 
