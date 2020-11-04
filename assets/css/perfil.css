@@ -11,61 +11,88 @@ body {
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 50px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   margin: 20px 20px 0px;
   font-family: var(--font-pacifico);
+  text-align: center;
+
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 5rem;
-  letter-spacing: 3px;
+  font-size: 3rem;
+  letter-spacing: 1px;
   margin-bottom: 20px;
+  color: black;
 }
 
 .description {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-shadow: 1px 1px 1px white;
+  color: black;
 }
 
-main {
-  max-width: 1240px;
+.perfil__main {
+  max-width: 90%;
   margin: 20px auto 0px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 20px;
+  padding: 50px;
+  border: 3px solid white;
 }
 
 .perfil__top {
-  margin-bottom: 30px;
   text-align: center;
+  width: 30%;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
 }
 
 .numbers {
   display: flex;
-
   text-align: center;
   justify-content: space-around;
-  max-width: 400px;
-  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  text-transform: uppercase;
 }
 
 .numbers div {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
+  padding: 10px;
   color: black;
   border-radius: 15px;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-a {
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.following__number,
+.followers__number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn__voltar {
   padding: 20px;
   background: rgba(255, 255, 255, 0.3);
   font-weight: bold;
@@ -81,7 +108,99 @@ a {
   text-align: center;
 }
 
-a:hover {
+.btn__voltar:hover {
   background-color: white;
   color: black;
+}
+
+.perfil__repositorios {
+  margin-left: 100px;
+  background-color: white;
+  width: 70%;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+
+.repositorio {
+  background-color: black;
+  max-height: 160px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  justify-content: space-around;
+  font-size: 3rem;
+  box-shadow: 0px 0px 7px 2px rgba(156, 150, 156, 1);
+}
+
+.repositorio__tec {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 10px 0px;
+}
+
+.btn__see-more {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.6rem;
+
+  padding: 4px 0px;
+  border-bottom: 1px solid red;
+  display: inline-block;
+  font-weight: 600;
+
+  transition: all 0.5s;
+}
+
+.btn__see-more:hover {
+  background-color: red;
+  color: black;
+}
+
+.btn-mais-perfil {
+  display: block;
+  width: 80%;
+  margin: 20px auto 0px;
+
+  padding: 15px;
+  background: black;
+
+  color: white;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1254px) {
+  .perfil__main {
+    flex-direction: column;
+  }
+
+  .perfil__top {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .perfil__repositorios {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .perfil__repositorios {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil__main {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .perfil__top {
+    padding: 40px 0px;
+  }
 }
