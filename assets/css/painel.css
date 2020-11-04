@@ -1,0 +1,86 @@
+:root {
+  --font-pacifico: "Pacifico", cursive;
+  --font-raleway: "Raleway", sans-serif;
+  font-size: 62.5%;
+}
+
+::placeholder {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+h1 {
+  color: white;
+  font-family: var(--font-pacifico);
+  font-size: 6rem;
+  letter-spacing: 5px;
+}
+
+.main__p {
+  color: white;
+  font-family: var(--font-raleway);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+form {
+  width: 100%;
+}
+
+input {
+  margin: 15px auto;
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: var(--font-raleway);
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#btn {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+
+#btn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  margin-top: 150px;
+  text-align: center;
+}
+
+small {
+  color: white;
+  font-size: 2rem;
+  font-family: var(--font-raleway);
+}
+
+.resultado p {
+  color: red;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--font-raleway);
+}
