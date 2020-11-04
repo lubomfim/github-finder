@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Finder</title>
+
+    <!-- Icon tab browser -->
+    <link rel="icon" href="assets/GitHub-Mark-32px.png" type="image/x-icon" />
+
+    <!-- Reset CSS and CSS -->
+    <link rel="stylesheet" href="./assets/css/resets.css" />
+    <link rel="stylesheet" href="./assets/css/painel.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,200;0,600;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="hero">
+      <h1>GitHub Finder</h1>
+      <p class="main__p">Find, meet and contribute!</p>
+      <form class="forms">
+        <input
+          type="text"
+          name="texto"
+          id="texto"
+          placeholder="Enter with user name"
+        />
+        <div class="resultado"></div>
+        <input
+          type="button"
+          value="Find it!"
+          id="btn"
+          onclick="consultarUsuario()"
+        />
+      </form>
+    </main>
+    <footer>
+      <small>Coded and designed by @lubomfim</small>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
