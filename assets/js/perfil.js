@@ -22,23 +22,14 @@ function consumirApiPessoal(url) {
     });
 }
 
-function alimentarDadosPessoais(dados) {
-  let nome = document.querySelector("h2");
-  let bio = document.querySelector(".description");
-  let followers = document.querySelector(".followers__number");
-  let following = document.querySelector(".following__number");
-  let avatar = document.querySelector(".avatar");
-  let title = document.querySelector("title");
-  let botaoPerfil = document.querySelector('.btn-mais-perfil')
-
-  nome.textContent = dados.name;
-  bio.textContent = dados.bio;
-  followers.textContent = dados.followers;
-  following.textContent = dados.following;
-  avatar.src = dados.avatar_url;
-  botaoPerfil.href = dados.html_url;
-
-  title.textContent = dados.name;
+function alimentarDadosPessoais({name, bio, followers, following, avatar_url, html_url}) {
+  document.querySelector("h2").textContent = name;
+  document.querySelector(".description").textContent = bio;
+  document.querySelector(".followers__number").textContent = followers;
+  document.querySelector(".following__number").textContent = following;
+  document.querySelector(".avatar").src = avatar_url;
+  document.querySelector(".title").textContent = name;;
+  document.querySelector('.btn-mais-perfil').href = html_url;
 }
 
 
