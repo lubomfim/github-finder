@@ -17,8 +17,6 @@ function consumirApiPessoal(url) {
 
     .catch(function (erro) {
       alert("Conexão apresenta erro. Tente novamente em alguns minutos.");
-      console.log("Erro de conexão:");
-      console.log(erro);
     });
 }
 
@@ -43,8 +41,6 @@ function consumirApiRepositorios (url) {
   })
   .catch(function (erro) {
     alert("Conexão apresenta erro. Tente novamente em alguns minutos.");
-    console.log("Erro de conexão:");
-    console.log(erro);
   });
 }
 

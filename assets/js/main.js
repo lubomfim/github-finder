@@ -1,8 +1,11 @@
 let entradaUsuario = document.querySelector("#texto");
+let formulario = document.querySelector('form')
 
-function consultarUsuario() {
+formulario.addEventListener('submit', function consultarUsuario(e) {
+  e.preventDefault();
   consumirAPI("https://api.github.com/users/" + entradaUsuario.value);
-}
+})
+
 
 function consumirAPI(url) {
   fetch(url)
@@ -13,7 +16,7 @@ function consumirAPI(url) {
     .then(function (dados) {
       if (dados.message === "Not Found") {
         let resultadoErro = document.querySelector(".resultado");
-
+ 
         resultadoErro.innerHTML = `<p>O usuário ${entradaUsuario.value} não existe, tente novamente! :)</p>`;
 
         entradaUsuario.value = "";
@@ -28,7 +31,5 @@ function consumirAPI(url) {
 
     .catch(function (erro) {
       alert("Conexão apresenta erro. Tente novamente em alguns minutos.");
-      console.log("Erro de conexão:");
-      console.log(erro);
     });
 }
