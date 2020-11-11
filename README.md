@@ -1,12 +1,13 @@
 # GitHub Finder
 
-Esse aplicativo foi desenvolvido para localizar usuários dentro do GitHub pelo seu username. Sendo seu objetivo maior, a prática na utilização de AJAX e consumo de API.
+Esse aplicativo foi desenvolvido para localizar usuários dentro do GitHub pelo seu username, com uma segunda página que mostra suas informações básicas como nome, resumo, seguidores e muito mais. Sendo seu objetivo maior, a prática na utilização de AJAX e consumo de API.
 
-<br>
 <br>
 <img width="600" src="assets/img/design.png">
 
-## Technologies
+<br>
+
+## 🚀 Technologies
 
 - HTML
 - CSS
